@@ -151,13 +151,13 @@ def event_handle(event,json_line):
         msg = str(event["message"]["text"])
         if (msg == "สวัสดี") :
             replyObj = TextSendMessage(text="ดีค่า")
-            line_bot_api.reply_message(rtoken, replyObj)
+            line_bot_api.reply_message(rtoken,replyObj)
         elif (msg == "กินข้าวไหม") :
             replyObj = TextSendMessage(text="ไม่กิน")
-            line_bot_api.reply_message(rtoken, replyObj)
+            line_bot_api.reply_message(rtoken,replyObj)
         elif (msg == "ไปเที่ยวไหม") :
             replyObj = TextSendMessage(text="ไปด้วย")
-            line_bot_api.reply_message(rtoken, replyObj)
+            line_bot_api.reply_message(rtoken,replyObj)
         else :
             headers = request.headers 
             json_headers = ({k:v for k, v in headers.items()})
